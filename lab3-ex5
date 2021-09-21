@@ -1,0 +1,28 @@
+#include <stdio.h>
+int fact(int n){
+    int k = 1;
+    for(int i =1 ; i < n+1 ; ++i){
+        k = k*i ;
+    }
+    return (k);
+}
+
+int main() {
+    int n ,m ;
+    scanf("%d%d"  , &n ,&m ) ;
+    for (int i = n ; i< m+1 ; ++i){
+        int k = 0, x = i ;
+        while( x ){
+            k = k + fact(x%10) ;
+            x = x/10;
+
+        }
+        if (i == k){
+            printf ("%d " , i) ;
+
+        }
+    }
+
+   
+    return 0;
+}
