@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+
+struct date {
+    int day;
+    char month[20];
+    int year;
+
+};
+
+struct student {
+    char name[20];
+    char surname[20];
+    int group;
+    struct date Date;
+};
+
+int main() {
+    struct student St;
+    printf("Write student's name\n");
+    scanf("%s", St.name);
+    printf("Write student's surname\n");
+    scanf("%s", St.surname);
+    printf("Student's group\n");
+    scanf("%d", &St.group);
+
+    printf("Write a day \n");
+    scanf("%d", &St.Date.day);
+    printf("Write a month\n");
+    scanf("%s", St.Date.month);
+    printf("Write a year\n");
+    scanf("%d", &St.Date.year);
+
+    printf("%s %s from group No%d will write the exam %d %s %d", St.name, St.surname, St.group, St.Date.day,
+           St.Date.month, St.Date.year);
+    return 0;
+}
