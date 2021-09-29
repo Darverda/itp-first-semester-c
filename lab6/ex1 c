@@ -1,0 +1,19 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Character s = in.nextLine().charAt(0);
+        int indexS;
+        if ('a' <= s && s <= 'z') {
+            indexS = (s - 'a') + 1;
+            System.out.println("index is " + indexS);
+        }
+        if ('A' <= s && s <= 'Z') {
+            indexS = (s - 'A') + 1;
+            System.out.println("index is " + indexS);
+        }
+    }
+}
