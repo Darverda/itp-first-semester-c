@@ -1,0 +1,20 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Character s = in.nextLine().charAt(0);
+        if ('a' <= s && s <= 'z') {
+            int asciivalue1 = (s - 'a') + 'a';
+            System.out.println("The ASCII value of " + s + " is: " + asciivalue1);
+
+        }
+        if('A' <= s && s<= 'Z')
+        {
+            int asciivalue1 = (s - 'A') + 'A';
+            System.out.println("The ASCII value of " + s + " is: " + asciivalue1);
+        }
+    }
+}
