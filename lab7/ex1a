@@ -1,0 +1,75 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+abstract class Animals {
+    private int height;
+    private int weight;
+    private String color;
+
+
+public Animals (int weight,int height,String color) {
+        this.height = height;
+        this.weight = weight;
+        this.color = color ;
+}
+public abstract String sleep();
+public  abstract String eat();
+public  abstract String sound();
+}
+class Cat extends Animals {
+        public Cat(int height, int weight, String color){
+            super(height,weight,color);
+}
+@Override
+    public String eat(){
+    return "mot-mot";
+}
+@Override
+    public String sleep (){
+    return "mrr" ;
+}
+@Override
+    public String sound(){
+    return "meow";
+}
+}
+class Cow extends Animals{
+        public Cow(int height, int weight, String color){
+            super(height,weight,color);
+        }
+        @Override
+        public String eat(){
+            return "chavk";
+        }
+        @Override
+        public String sleep (){
+            return "hrr" ;
+        }
+        @Override
+        public String sound(){
+            return "myuuu";
+        }
+    }
+    class Dog extends Animals{
+        public Dog(int height, int weight, String color){
+            super(height,weight,color);
+        }
+        @Override
+        public String eat(){
+            return "htum-hrom";
+        }
+        @Override
+        public String sleep (){
+            return "furfur" ;
+        }
+        @Override
+        public String sound(){
+            return "gavgav";
+        }
+    }
