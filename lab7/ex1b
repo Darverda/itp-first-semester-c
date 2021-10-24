@@ -1,0 +1,32 @@
+
+package com.company;
+import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+        int num1;
+        int num2;
+        double answer;
+        char operator;
+            Scanner reader = new Scanner(System.in);
+            System.out.print("Input numbers: ");
+            num1= reader.nextInt();
+            num2=reader.nextInt();
+            System.out.println("print an operator of ");
+            operator = reader.next().charAt(0);
+            switch(operator){
+                case '+' : answer = num1+num2;
+                break;
+                case '-' : answer = num1-num2;
+                break;
+                case '*' : answer = num1*num2;
+                break;
+                case '/' : answer = num1/num2;
+                break;
+                default :
+                    System.out.println("error");
+                    return;
+            }
+            System.out.printf(num1 + " " + operator + " " + num2 + " = " + answer );
+        }
+    }
